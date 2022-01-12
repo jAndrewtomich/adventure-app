@@ -14,3 +14,5 @@ def index():
 
 if __name__ == '__main__':
     app.run()
+
+#This is meant to be a game modeled after a choose-your-own adventure book.
