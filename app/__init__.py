@@ -1,16 +1,13 @@
-import os
-from flask import Flask, render_template, url_for
+from flask import Flask
+from flask_bootstrap import Bootstrap
+
+bootstrap = Bootstrap()
 
 
-app = Flask(__name__)
+def create_app():
+    app = Flask(__name__)
+    bootstrap.init_app(app)
 
-
-@app.route('/')
-def fundament():
-    return render_template('fundament.html')
-
-
-if __name__ == '__main__':
-    app.run()
+    return app
 
 #This is meant to be a game modeled after a choose-your-own adventure book.
